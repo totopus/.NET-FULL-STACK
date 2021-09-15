@@ -167,7 +167,4 @@ Where ProductSubCategoryID IS NOT NULL
 	AND Name IS NOT NULL 
 	AND Color IS NOT NULL 
 	AND ListPrice IS NOT NULL
-	AND (Name LIKE '%Road%' OR Name LIKE '%Mountain%')
-	AND ListPrice BETWEEN 500 AND 2000
 	AND Color IN ('Black','Red','Silver','Yellow')
-Order By ProductSubCategoryID DESC
