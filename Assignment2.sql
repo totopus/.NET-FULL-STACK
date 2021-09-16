@@ -167,9 +167,10 @@ Order By Counts DESC
 
 --16.List top 5 locations (Zip Code) where the products sold most in last 20 years??????????
 Select TOP 5 ShipPostalCode AS [Locations], COUNT(ShipPostalCode) AS [Counts] From Orders
-Where ShipPostalCode IS NOT NULL
+Where ShipPostalCode IS NOT NULL AND OrderDate > '2001-09-16 00:00:00.000'
 Group By ShipPostalCode
-Order By Counts DESC
+
+
 
 --17.List all city names and number of customers in that city. 
 Select City, COUNT(CustomerID) AS [Number of Customers] From Customers
